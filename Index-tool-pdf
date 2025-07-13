@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tools for PDF editing, conversion, compression, signing, merging and more. Also compress images, merge images, convert documents and optimize your files.">
+    <meta name="keywords" content="PDF editor, PDF converter, image compressor, document tools, file conversion, PDF to Word, Word to PDF, Excel to PDF, PDF sign, PDF merge">
+    <title>DocTools Pro - Comprehensive Document & Media Processing Tools</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doctoolspro.com/">
+    <meta property="og:title" content="DocTools Pro - Comprehensive Document & Media Processing Tools">
+    <meta property="og:description" content="Free online tools for PDF editing, conversion, compression, signing, merging and more.">
+    <meta property="og:image" content="https://doctoolspro.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://doctoolspro.com/">
+    <meta property="twitter:title" content="DocTools Pro - Comprehensive Document & Media Processing Tools">
+    <meta property="twitter:description" content="Free online tools for PDF editing, conversion, compression, signing, merging and more.">
+    <meta property="twitter:image" content="https://doctoolspro.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://doctoolspro.com/">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-light: #e6f0ff;
+            --secondary-color: #3f37c9;
+            --accent-color: #f72585;
+            --success-color: #4cc9f0;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gray-color: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --box-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7ff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            height: 70px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            height: 36px;
+            width: 36px;
+            background: var(--gradient);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--gray-color);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-color);
+            cursor: pointer;
+            z-index: 101;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Tools Section */
+        .tools-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+        
+        .section-title p {
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .tool-icon {
+            background: var(--primary-light);
+            color: var(--primary-color);
+            padding: 25px;
+            text-align: center;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tool-content {
+            padding: 20px;
+        }
+        
+        .tool-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .tool-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .tool-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: var(--border-radius-sm);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .tool-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Ad Section */
+        .ad-section {
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .ad-container {
+            max-width: 728px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--light-gray);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 40px 25px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-lg);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 25px;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: var(--gray-color);
+            font-size: 0.95rem;
+        }
+        
+        /* Tool Interface */
+        .tool-interface {
+            display: none;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-lg);
+            padding: 30px;
+            margin-top: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .active-tool {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .tool-header h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tool-header h3 i {
+            color: var(--primary-color);
+        }
+        
+        .close-tool {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .close-tool:hover {
+            background: var(--light-gray);
+            color: var(--dark-color);
+        }
+        
+        .file-upload {
+            border: 2px dashed #ccc;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(248, 249, 250, 0.5);
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.05);
+        }
+        
+        .file-upload i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .file-upload p {
+            margin-bottom: 10px;
+            color: var(--gray-color);
+        }
+        
+        .file-upload .small {
+            font-size: 0.85rem;
+            color: var(--gray-color);
+            opacity: 0.7;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .options-section {
+            margin-top: 30px;
+        }
+        
+        .option-group {
+            margin-bottom: 25px;
+        }
+        
+        .option-group h4 {
+            margin-bottom: 12px;
+            color: var(--dark-color);
+            font-weight: 500;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .option-group h4 i {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .slider-container {
+            margin-bottom: 15px;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #ddd;
+            outline: none;
+            -webkit-appearance: none;
+            transition: var(--transition);
+        }
+        
+        .slider:hover {
+            opacity: 0.8;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: var(--gray-color);
+        }
+        
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .radio-option input, .checkbox-option input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        
+        .radio-option label, .checkbox-option label {
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+        
+        .checkbox-option input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .checkbox-option input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .checkbox-option input[type="checkbox"]:checked::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 10px;
+        }
+        
+        .radio-option input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            outline: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .radio-option input[type="radio"]:checked {
+            border-color: var(--primary-color);
+        }
+        
+        .radio-option input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-gray);
+            color: var(--dark-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        .result-section {
+            margin-top: 30px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .result-preview {
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            background: rgba(248, 249, 250, 0.5);
+        }
+        
+        .result-preview img {
+            max-width: 100%;
+            max-height: 300px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .result-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .result-info div {
+            flex: 1;
+            min-width: 120px;
+            background: white;
+            padding: 15px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .result-info p {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            margin-bottom: 5px;
+        }
+        
+        .result-info span {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--success-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);
+        }
+        
+        .download-btn:hover {
+            background-color: #3ab8dd;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 201, 240, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #bdc1c6;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-contact {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #bdc1c6;
+            font-size: 0.9rem;
+        }
+        
+        .footer-contact i {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc1c6;
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 10px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: white;
+                box-shadow: var(--box-shadow);
+                padding: 80px 30px 30px;
+                transform: translateX(-100%);
+                transition: var(--transition);
+                z-index: 99;
+                overflow-y: auto;
+            }
+            
+            nav.active {
+                transform: translateX(0);
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul li {
+                margin: 0;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 10px 25px;
+            }
+            
+            .tool-interface {
+                padding: 25px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-interface {
+                padding: 20px;
+            }
+            
+            .result-info div {
+                min-width: 100%;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary-color);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-img">DT</div>
+                <div class="logo-text">DocTools Pro</div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>All Your Document & Media Tools in One Place</h2>
+            <p>Convert, compress, edit, merge, and optimize your files with our free online tools. No installation required.</p>
+            <a href="#tools" class="cta-button">
+                <i class="fas fa-rocket"></i> Explore Tools
+            </a>
+        </div>
+    </section>
+    
+    <div class="ad-section">
+        <div class="container ad-container">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+                crossorigin="anonymous"></script>
+            <!-- Responsive Ad Unit -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Powerful Tools</h2>
+                <p>Choose from our wide range of document and media processing tools to get your work done efficiently.</p>
+            </div>
+            
+            <div class="tools-grid">
+                <!-- PDF Tools -->
+                <div class="tool-card" data-tool="pdf-compress">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>PDF Compressor</h3>
+                        <p>Reduce PDF file size while preserving quality. Perfect for email attachments and web uploads.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-merge">
+                    <div class="tool-icon">
+                        <i class="fas fa-object-group"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>PDF Merger</h3>
+                        <p>Combine multiple PDF files into a single document in just a few clicks.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-edit">
+                    <div class="tool-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>PDF Editor</h3>
+                        <p>Edit your PDF files online. Add text, images, shapes and more to your documents.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-sign">
+                    <div class="tool-icon">
+                        <i class="fas fa-signature"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>PDF Sign</h3>
+                        <p>Add digital signatures to your PDF documents securely and legally.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="split-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Split PDF</h3>
+                        <p>Extract pages from your PDF or split into multiple documents.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="pdf-to-word">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>PDF to Word</h3>
+                        <p>Convert PDF files to editable Word documents with high accuracy.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="word-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Word to PDF</h3>
+                        <p>Convert Word documents to PDF files while preserving formatting.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-card" data-tool="excel-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Excel to PDF</h3>
+                        <p>Convert Excel spreadsheets to PDF files with proper formatting.</p>
+                        <a href="#" class="tool-button use-tool">
+                            <i class="fas fa-play"></i> Use Tool
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- More tool cards would follow the same pattern -->
+                <!-- For brevity, I've included 8 tool cards -->
+            </div>
+            
+            <!-- Tool Interfaces will be loaded here -->
+            <div id="tool-interfaces">
+                <!-- PDF Compressor Tool -->
+                <div class="tool-interface" id="pdf-compress-tool">
+                    <div class="tool-header">
+                        <h3><i class="fas fa-file-pdf"></i> PDF Compressor</h3>
+                        <button class="close-tool">&times;</button>
+                    </div>
+                    <div class="file-upload" id="pdf-compress-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop your PDF file here or click to browse</p>
+                        <p class="small">Maximum file size: 50MB</p>
+                        <input type="file" id="pdf-compress-input" class="file-input" accept=".pdf">
+                    </div>
+                    <div class="options-section">
+                        <div class="option-group">
+                            <h4><i class="fas fa-sliders-h"></i> Compression Level</h4>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="3" value="2" class="slider" id="pdf-compression-level">
+                                <div class="slider-labels">
+                                    <span>Low Quality</span>
+                                    <span>Balanced</span>
+                                    <span>High Compression</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <h4><i class="fas fa-cog"></i> Optimization Options</h4>
+                            <div class="checkbox-group">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="pdf-downsample-images" checked>
+                                    <label for="pdf-downsample-images">Downsample images</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="pdf-remove-metadata" checked>
+                                    <label for="pdf-remove-metadata">Remove metadata</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="pdf-optimize-fonts">
+                                    <label for="pdf-optimize-fonts">Optimize fonts</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="compress-pdf-btn">
+                            <i class="fas fa-compress"></i> Compress PDF
+                        </button>
+                        <button class="btn btn-secondary close-tool">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                    <div class="spinner" id="pdf-compress-spinner"></div>
+                    <div class="result-section" id="pdf-compress-result">
+                        <div class="result-preview">
+                            <i class="fas fa-file-pdf" style="font-size: 4rem; color: var(--primary-color);"></i>
+                            <h4>Your compressed PDF is ready!</h4>
+                            <div class="result-info">
+                                <div>
+                                    <p>Original Size</p>
+                                    <span id="original-pdf-size">5.2 MB</span>
+                                </div>
+                                <div>
+                                    <p>Compressed Size</p>
+                                    <span id="compressed-pdf-size">1.8 MB</span>
+                                </div>
+                                <div>
+                                    <p>Reduction</p>
+                                    <span id="pdf-reduction">65%</span>
+                                </div>
+                            </div>
+                            <a href="#" class="download-btn" id="download-compressed-pdf">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Compressor Tool -->
+                <div class="tool-interface" id="image-compress-tool">
+                    <div class="tool-header">
+                        <h3><i class="fas fa-file-image"></i> Image Compressor</h3>
+                        <button class="close-tool">&times;</button>
+                    </div>
+                    <div class="file-upload" id="image-compress-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop your image here or click to browse</p>
+                        <p class="small">Supports JPG, PNG, GIF, WEBP (Max: 20MB)</p>
+                        <input type="file" id="image-compress-input" class="file-input" accept="image/*">
+                    </div>
+                    <div class="options-section">
+                        <div class="option-group">
+                            <h4><i class="fas fa-sliders-h"></i> Quality Level</h4>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="100" value="80" class="slider" id="image-quality-level">
+                                <div class="slider-labels">
+                                    <span>Low (Smaller Size)</span>
+                                    <span>High (Better Quality)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <h4><i class="fas fa-file-export"></i> Output Format</h4>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="format-original" name="image-format" value="original" checked>
+                                    <label for="format-original">Original Format</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="format-jpg" name="image-format" value="jpg">
+                                    <label for="format-jpg">JPG</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="format-png" name="image-format" value="png">
+                                    <label for="format-png">PNG</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="format-webp" name="image-format" value="webp">
+                                    <label for="format-webp">WEBP</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option-group">
+                            <h4><i class="fas fa-expand"></i> Resize Options</h4>
+                            <div class="checkbox-group">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="resize-image">
+                                    <label for="resize-image">Resize image</label>
+                                </div>
+                            </div>
+                            <div id="resize-options" style="display: none; margin-top: 10px;">
+                                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                                    <div>
+                                        <label for="image-width">Width:</label>
+                                        <input type="number" id="image-width" style="width: 80px; padding: 8px; border: 1px solid #ddd; border-radius: var(--border-radius-sm);" placeholder="px">
+                                    </div>
+                                    <div>
+                                        <label for="image-height">Height:</label>
+                                        <input type="number" id="image-height" style="width: 80px; padding: 8px; border: 1px solid #ddd; border-radius: var(--border-radius-sm);" placeholder="px">
+                                    </div>
+                                    <div>
+                                        <label for="keep-aspect">Keep aspect:</label>
+                                        <input type="checkbox" id="keep-aspect" checked>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="compress-image-btn">
+                            <i class="fas fa-compress"></i> Compress Image
+                        </button>
+                        <button class="btn btn-secondary close-tool">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                    <div class="spinner" id="image-compress-spinner"></div>
+                    <div class="result-section" id="image-compress-result">
+                        <div class="result-preview">
+                            <img id="compressed-image-preview" src="" alt="Compressed Image Preview">
+                            <div class="result-info">
+                                <div>
+                                    <p>Original Size</p>
+                                    <span id="original-image-size">1.8 MB</span>
+                                </div>
+                                <div>
+                                    <p>Compressed Size</p>
+                                    <span id="compressed-image-size">0.6 MB</span>
+                                </div>
+                                <div>
+                                    <p>Reduction</p>
+                                    <span id="image-reduction">67%</span>
+                                </div>
+                            </div>
+                            <a href="#" class="download-btn" id="download-compressed-image">
+                                <i class="fas fa-download"></i> Download Image
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More tool interfaces would follow the same pattern -->
+            </div>
+        </div>
+    </section>
+    
+    <div class="ad-section">
+        <div class="container ad-container">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+                crossorigin="anonymous"></script>
+            <!-- Responsive Ad Unit -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our Tools?</h2>
+                <p>We provide the best online document and media processing experience with these powerful features.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Processing</h3>
+                    <p>All files are processed in your browser for maximum privacy. We don't store your documents on our servers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Our tools use advanced algorithms to process your files quickly without compromising quality.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Works perfectly on all devices - smartphones, tablets, and desktop computers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>No Installation</h3>
+                    <p>All tools work directly in your web browser. No software download or installation required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Multi-language Support</h3>
+                    <p>Our OCR technology supports text recognition in multiple languages for accurate conversions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3>Free to Use</h3>
+                    <p>All our basic tools are completely free with no hidden charges or watermarks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="#">PDF Tools</a></li>
+                        <li><a href="#">Image Tools</a></li>
+                        <li><a href="#">Video Tools</a></li>
+                        <li><a href="#">Document Converters</a></li>
+                        <li><a href="#">All Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@doctoolspro.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 DocTools Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Tool Selection
+        const toolCards = document.querySelectorAll('.tool-card');
+        const toolInterfaces = document.getElementById('tool-interfaces');
+        const closeToolButtons = document.querySelectorAll('.close-tool');
+        
+        toolCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.classList.contains('use-tool') || e.target.closest('.use-tool')) {
+                    e.preventDefault();
+                    const toolName = card.getAttribute('data-tool');
+                    
+                    // Hide all tool interfaces
+                    document.querySelectorAll('.tool-interface').forEach(interface => {
+                        interface.classList.remove('active-tool');
+                    });
+                    
+                    // Hide all result sections
+                    document.querySelectorAll('.result-section').forEach(result => {
+                        result.style.display = 'none';
+                    });
+                    
+                    // Show selected tool interface
+                    const toolInterface = document.getElementById(`${toolName}-tool`);
+                    if (toolInterface) {
+                        toolInterface.classList.add('active-tool');
+                        window.scrollTo({
+                            top: toolInterfaces.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        closeToolButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tool-interface').forEach(interface => {
+                    interface.classList.remove('active-tool');
+                });
+            });
+        });
+        
+        // File Upload Functionality
+        const fileUploads = document.querySelectorAll('.file-upload');
+        
+        fileUploads.forEach(upload => {
+            const input = upload.querySelector('.file-input');
+            
+            upload.addEventListener('click', () => {
+                input.click();
+            });
+            
+            upload.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                upload.style.borderColor = var(--primary-color);
+                upload.style.backgroundColor = 'rgba(67, 97, 238, 0.05)';
+            });
+            
+            upload.addEventListener('dragleave', () => {
+                upload.style.borderColor = '#ccc';
+                upload.style.backgroundColor = 'rgba(248, 249, 250, 0.5)';
+            });
+            
+            upload.addEventListener('drop', (e) => {
+                e.preventDefault();
+                upload.style.borderColor = '#ccc';
+                upload.style.backgroundColor = 'rgba(248, 249, 250, 0.5)';
+                
+                if (e.dataTransfer.files.length) {
+                    input.files = e.dataTransfer.files;
+                    handleFileSelection(input);
+                }
+            });
+            
+            input.addEventListener('change', () => {
+                if (input.files.length) {
+                    handleFileSelection(input);
+                }
+            });
+        });
+        
+        function handleFileSelection(input) {
+            const uploadArea = input.closest('.file-upload');
+            const fileName = input.files[0].name;
+            const fileSize = (input.files[0].size / (1024 * 1024)).toFixed(2); // MB
+            
+            uploadArea.innerHTML = `
+                <i class="fas fa-check-circle" style="color: var(--success-color); font-size: 3rem;"></i>
+                <p>${fileName}</p>
+                <p class="small">${fileSize} MB</p>
+                <button class="btn btn-secondary" style="margin-top: 10px; padding: 8px 15px;">
+                    <i class="fas fa-sync-alt"></i> Change File
+                </button>
+                <input type="file" id="${input.id}" class="file-input" accept="${input.accept}" style="display: none;">
+            `;
+            
+            // Reattach event listeners to the new change file button
+            uploadArea.querySelector('button').addEventListener('click', (e) => {
+                e.stopPropagation();
+                input.click();
+            });
+        }
+        
+        // Tool Functionality Examples
+        // PDF Compress
+        document.getElementById('compress-pdf-btn')?.addEventListener('click', function() {
+            const spinner = document.getElementById('pdf-compress-spinner');
+            const resultSection = document.getElementById('pdf-compress-result');
+            
+            // Show loading spinner
+            spinner.style.display = 'block';
+            
+            // Simulate processing
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                resultSection.style.display = 'block';
+                
+                // Scroll to result
+                resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 2000);
+        });
+        
+        // Image Compress
+        document.getElementById('compress-image-btn')?.addEventListener('click', function() {
+            const spinner = document.getElementById('image-compress-spinner');
+            const resultSection = document.getElementById('image-compress-result');
+            
+            // Show loading spinner
+            spinner.style.display = 'block';
+            
+            // Simulate processing
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                resultSection.style.display = 'block';
+                
+                // Scroll to result
+                resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 2000);
+        });
+        
+        // Resize image checkbox toggle
+        document.getElementById('resize-image')?.addEventListener('change', function() {
+            document.getElementById('resize-options').style.display = this.checked ? 'block' : 'none';
+        });
+        
+        // Keep aspect ratio for image resize
+        document.getElementById('keep-aspect')?.addEventListener('change', function() {
+            if (this.checked) {
+                // Implement aspect ratio locking logic
+            }
+        });
+        
+        // Initialize AdSense
+        window.addEventListener('load', () => {
+            // AdSense initialization would happen here
+            // Note: Actual AdSense implementation requires proper Ad Unit IDs
+        });
+    </script>
+</body>
+</html>
